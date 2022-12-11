@@ -9,7 +9,7 @@
             while (flag)
             {
                 Console.WriteLine("Logical Programming Problems");
-                Console.WriteLine("1.Fibonacci Series");
+                Console.WriteLine("1.Fibonacci Series\n2.PerfectNumber");
                 int check = Convert.ToInt32(Console.ReadLine());
                 switch (check)
                 {
@@ -17,6 +17,10 @@
                         Console.WriteLine(" Create Fibonacci Series");
                         FibonacciSeries series = new FibonacciSeries();
                         series.Fibonacci();
+                        break;
+                    case  2:
+                        PerfectNumber perfect= new PerfectNumber();
+                        perfect.Perfect();
                         break;
                     default:
                         flag = false;
