@@ -1,4 +1,6 @@
-﻿namespace LogicalProgramming
+﻿using System.CodeDom.Compiler;
+
+namespace LogicalProgramming
 {
     public class Program
     {
@@ -9,7 +11,8 @@
             while (flag)
             {
                 Console.WriteLine("Logical Programming Problems");
-                Console.WriteLine("1.Fibonacci Series\n2.PerfectNumber\n3.PrimeNumber\n4.ReverseNumber");
+                Console.WriteLine("1.Fibonacci Series\n2.PerfectNumber\n3.PrimeNumber\n4.ReverseNumber" +
+                    "\n5.CouponNumber");
                 int check = Convert.ToInt32(Console.ReadLine());
                 switch (check)
                 {
@@ -29,6 +32,10 @@
                     case 4:
                         ReverseNumber reverse= new ReverseNumber(); 
                         reverse.Reverse();
+                        break;
+                    case 5:
+                        CouponNumber coup = new CouponNumber();
+                        coup.Generate();
                         break;
                     default:
                         flag = false;
